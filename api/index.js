@@ -2,8 +2,14 @@ const express = require('express');
 const axios = require('axios');
 const { PassThrough } = require('stream');
 const cheerio = require('cheerio');
+const cors = require('cors');
 
 const app = express();
+
+app.use(cors({
+  origin: '*',
+}));
+
 const PORT = process.env.PORT || 3000;
 
 async function getVideoInformations(videoId){
