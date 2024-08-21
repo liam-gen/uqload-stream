@@ -186,6 +186,8 @@ app.get('/download', async (req, res) => {
   }
 });
 
-const server = app.listen(PORT, () => {
+app.listen(PORT, () => {
   console.log(`Serveur démarré sur http://localhost:${PORT}`);
 });
+
+module.exports = app;
